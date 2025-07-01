@@ -1,0 +1,51 @@
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(#ffe5ec, #fff);
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: #333;
+}
+.welcome-screen {
+    padding: 1rem;
+}
+.hero-img {
+    width: 80%;
+    max-width: 400px;
+    border-radius: 20px;
+    margin-top: 1rem;
+}
+h1 {
+    color: #c2185b;
+    font-size: 2.2rem;
+    margin: 0.5rem 0;
+}
+.tagline {
+    font-style: italic;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+.from {
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+.countdown-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+    gap: 10px;
+    padding: 20px;
+}
+.day-tile {
+    background: #f8bbd0;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.day-tile.locked {
+    background: #e0e0e0;
+    color: #aaa;
+    cursor: not-allowed;
+}
