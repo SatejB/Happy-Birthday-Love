@@ -31,15 +31,21 @@ for (let i = 0; i < totalDays; i++) {
   tile.classList.add("day-tile");
 
   if (tileDate.toDateString() <= today.toDateString()) {
-    tile.textContent = `Day ${i + 1}`;
+    const daysLeft = totalDays - i;
+
+    tile.textContent = daysLeft === 0
+      ? "🎉 Happy Birthday! 🎉"
+      : `${daysLeft} Day${daysLeft > 1 ? 's' : ''} to Go`;
+
     tile.addEventListener("click", () => {
-      alert(surpriseMessages[i] || `Surprise for Day ${i + 1}! 💌`);
+      alert(surpriseMessages[i] || `Surprise! 💌`);
     });
   } else {
     tile.classList.add("locked");
-    tile.textContent = `Day ${i + 1} 🔒`;
+    tile.textContent = `🔒 Locked`;
   }
 
   grid.appendChild(tile);
 }
+
 
