@@ -30,7 +30,7 @@ for (let i = 0; i < totalDays; i++) {
   const tile = document.createElement("div");
   tile.classList.add("day-tile");
 
-  if (tileDate <= today) {
+  if (tileDate.toDateString() <= today.toDateString()) {
     tile.textContent = `Day ${i + 1}`;
     tile.addEventListener("click", () => {
       alert(surpriseMessages[i] || `Surprise for Day ${i + 1}! 💌`);
@@ -42,3 +42,4 @@ for (let i = 0; i < totalDays; i++) {
 
   grid.appendChild(tile);
 }
+
