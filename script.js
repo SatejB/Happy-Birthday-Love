@@ -6,21 +6,21 @@ const today = new Date();
 today.setHours(0, 0, 0, 0);
 
 const surpriseMessages = [
-  "Your smile is my favorite sunrise ðŸŒ…",
-  "I still remember the first time I saw you ðŸ’«",
-  "You make the world softer and brighter âœ¨",
-  "If love is a song, you're my favorite verse ðŸŽ¶",
-  "Your laugh is music to my soul ðŸŽµ",
-  "I can't wait to grow old with you ðŸ•°ï¸",
-  "You're my home and my adventure ðŸ¡â¤ï¸",
-  "You deserve flowers every day ðŸ’",
-  "Youâ€™re my peace and my chaos ðŸ˜‡ðŸ”¥",
-  "I love your sleepy face ðŸ˜´ðŸ’•",
-  "Iâ€™m proud to love you ðŸ’˜",
-  "You make ordinary moments magical âœ¨",
-  "Forever doesnâ€™t seem long enough with you â™¾ï¸",
-  "You're more beautiful every day ðŸŒ¹",
-  "I wrote your name on the sky ðŸŒŒ"
+  "Your smile is my favorite sunrise 🌅",
+  "I still remember the first time I saw you 💫",
+  "You make the world softer and brighter ✨",
+  "If love is a song, you're my favorite verse 🎶",
+  "Your laugh is music to my soul 🎵",
+  "I can't wait to grow old with you 🕰️",
+  "You're my home and my adventure 🏡❤️",
+  "You deserve flowers every day 💐",
+  "You’re my peace and my chaos 😇🔥",
+  "I love your sleepy face 😴💕",
+  "I’m proud to love you 💘",
+  "You make ordinary moments magical ✨",
+  "Forever doesn’t seem long enough with you ♾️",
+  "You're more beautiful every day 🌹",
+  "I wrote your name on the sky 🌌"
 ];
 
 for (let i = 0; i < totalDays; i++) {
@@ -35,15 +35,15 @@ for (let i = 0; i < totalDays; i++) {
     const daysLeft = totalDays - i;
 
     tile.textContent = isBirthday
-      ? "ðŸŽ‰ Happy Birthday! ðŸŽ‰"
+      ? "🎉 Happy Birthday! 🎉"
       : \`\${daysLeft} Day\${daysLeft > 1 ? 's' : ''} to Go\`;
 
     tile.addEventListener("click", () => {
-      alert(surpriseMessages[i] || \`Surprise! ðŸ’Œ\`);
+      alert(surpriseMessages[i] || \`Surprise! 💌\`);
     });
   } else {
     tile.classList.add("locked");
-    tile.textContent = \`ðŸ”’ Locked\`;
+    tile.textContent = \`🔒 Locked\`;
   }
 
   grid.appendChild(tile);
