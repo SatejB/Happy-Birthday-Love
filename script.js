@@ -6,21 +6,21 @@ const today = new Date();
 today.setHours(0, 0, 0, 0);
 
 const surpriseMessages = [
-  "Day 1: Your smile is my favorite sunrise 🌅",
-  "Day 2: I still remember the first time I saw you 💫",
-  "Day 3: You make the world softer and brighter ✨",
-  "Day 4: If love is a song, you're my favorite verse 🎶",
-  "Day 5: Your laugh is music to my soul 🎵",
-  "Day 6: I can't wait to grow old with you 🕰️",
-  "Day 7: You're my home and my adventure 🏡❤️",
-  "Day 8: You deserve flowers every day 💐",
-  "Day 9: You’re my peace and my chaos 😇🔥",
-  "Day 10: I love your sleepy face 😴💕",
-  "Day 11: I’m proud to love you 💘",
-  "Day 12: You make ordinary moments magical ✨",
-  "Day 13: Forever doesn’t seem long enough with you ♾️",
-  "Day 14: You're more beautiful every day 🌹",
-  "Day 15: I wrote your name on the sky 🌌"
+  "Your smile is my favorite sunrise 🌅",
+  "I still remember the first time I saw you 💫",
+  "You make the world softer and brighter ✨",
+  "If love is a song, you're my favorite verse 🎶",
+  "Your laugh is music to my soul 🎵",
+  "I can't wait to grow old with you 🕰️",
+  "You're my home and my adventure 🏡❤️",
+  "You deserve flowers every day 💐",
+  "You’re my peace and my chaos 😇🔥",
+  "I love your sleepy face 😴💕",
+  "I’m proud to love you 💘",
+  "You make ordinary moments magical ✨",
+  "Forever doesn’t seem long enough with you ♾️",
+  "You're more beautiful every day 🌹",
+  "I wrote your name on the sky 🌌"
 ];
 
 for (let i = 0; i < totalDays; i++) {
