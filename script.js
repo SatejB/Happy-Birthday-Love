@@ -1,5 +1,5 @@
 
-const startDate = new Date("2024-07-02");
+const startDate = new Date("2024-07-19");
 const totalDays = 15;
 const grid = document.getElementById("countdownGrid");
 const today = new Date();
@@ -29,9 +29,9 @@ for (let i = 0; i < totalDays; i++) {
 
   const tile = document.createElement("div");
   tile.classList.add("day-tile");
-  tile.textContent = `Day ${i + 1}`;
 
   if (tileDate <= today) {
+    tile.textContent = `Day ${i + 1}`;
     tile.addEventListener("click", () => {
       alert(surpriseMessages[i] || `Surprise for Day ${i + 1}! 💌`);
     });
