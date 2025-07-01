@@ -20,6 +20,10 @@ const surpriseMessages = [
   "I wrote your name on the sky 🌌"
 ];
 
+function formatDateToYMD(date) {
+  return date.toISOString().split("T")[0]; // "YYYY-MM-DD"
+}
+
 for (let i = 0; i < totalDays; i++) {
   const tileDate = new Date(startDate);
   tileDate.setDate(tileDate.getDate() + i);
@@ -27,7 +31,7 @@ for (let i = 0; i < totalDays; i++) {
   const tile = document.createElement("div");
   tile.classList.add("day-tile");
 
-  const isBirthday = tileDate.toDateString() === new Date("2024-08-02").toDateString();
+  const isBirthday = formatDateToYMD(tileDate) === "2024-08-02";
   const daysLeft = totalDays - i;
 
   tile.textContent = isBirthday
