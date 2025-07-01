@@ -1,8 +1,6 @@
 const startDate = new Date("2024-07-18");
 const totalDays = 15;
 const grid = document.getElementById("countdownGrid");
-const today = new Date();
-today.setHours(0, 0, 0, 0);
 
 const surpriseMessages = [
   "Your smile is my favorite sunrise 🌅",
@@ -29,21 +27,16 @@ for (let i = 0; i < totalDays; i++) {
   const tile = document.createElement("div");
   tile.classList.add("day-tile");
 
-  if (tileDate.toDateString() <= today.toDateString()) {
-    const isBirthday = tileDate.toDateString() === new Date("2024-08-02").toDateString();
-    const daysLeft = totalDays - i;
+  const isBirthday = tileDate.toDateString() === new Date("2024-08-02").toDateString();
+  const daysLeft = totalDays - i;
 
-    tile.textContent = isBirthday
-      ? "🎉 Happy Birthday! 🎉"
-      : `${daysLeft} Day${daysLeft > 1 ? 's' : ''} to Go`;
+  tile.textContent = isBirthday
+    ? "🎉 Happy Birthday! 🎉"
+    : `${daysLeft} Day${daysLeft > 1 ? 's' : ''} to Go`;
 
-    tile.addEventListener("click", () => {
-      alert(surpriseMessages[i] || `Surprise! 💌`);
-    });
-  } else {
-    tile.classList.add("locked");
-    tile.textContent = `🔒 Locked`;
-  }
+  tile.addEventListener("click", () => {
+    alert(surpriseMessages[i] || `Surprise! 💌`);
+  });
 
   grid.appendChild(tile);
 }
