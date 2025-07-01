@@ -1,4 +1,3 @@
-
 const startDate = new Date("2024-07-18");
 const totalDays = 15;
 const grid = document.getElementById("countdownGrid");
@@ -36,14 +35,14 @@ for (let i = 0; i < totalDays; i++) {
 
     tile.textContent = isBirthday
       ? "🎉 Happy Birthday! 🎉"
-      : \`\${daysLeft} Day\${daysLeft > 1 ? 's' : ''} to Go\`;
+      : `${daysLeft} Day${daysLeft > 1 ? 's' : ''} to Go`;
 
     tile.addEventListener("click", () => {
-      alert(surpriseMessages[i] || \`Surprise! 💌\`);
+      alert(surpriseMessages[i] || `Surprise! 💌`);
     });
   } else {
     tile.classList.add("locked");
-    tile.textContent = \`🔒 Locked\`;
+    tile.textContent = `🔒 Locked`;
   }
 
   grid.appendChild(tile);
