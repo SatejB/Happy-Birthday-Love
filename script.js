@@ -49,7 +49,7 @@ for (let i = 0; i < totalDays; i++) {
         <h2>Where it all began...</h2>
         <img src="day1-meeting.png" alt="First step of destiny" class="modal-img"/>
         <p>
-          It all started when my sister-in-law met your parents at PNG. 
+          It all started when my sister-in-law met your parents. 
           A conversation that seemed casual led to a lifetime spark ✨<br><br>
           That day, unknowingly, our stars aligned.
         </p>
