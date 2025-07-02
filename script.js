@@ -91,7 +91,7 @@ function createModal(title, imageSrc, message, bgmSrc) {
       <h2>${title}</h2>
       <img src="${imageSrc}" alt="${title}" class="modal-img"/>
       <p>${message}</p>
-      <audio controls autoplay loop>
+      <audio autoplay loop>
         <source src="${bgmSrc}" type="audio/mpeg">
         Your browser does not support the audio element.
       </audio>
@@ -104,3 +104,4 @@ function createModal(title, imageSrc, message, bgmSrc) {
 
   return modal;
 }
+
