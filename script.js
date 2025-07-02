@@ -39,8 +39,36 @@ for (let i = 0; i < totalDays; i++) {
     : `${daysLeft} Day${daysLeft > 1 ? 's' : ''} to Go`;
 
   tile.addEventListener("click", () => {
+  if (i === 0) {
+    // Day 1: Show custom image, message, and bgm
+    const modal = document.createElement("div");
+    modal.classList.add("custom-modal");
+    modal.innerHTML = `
+      <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h2>Where it all began...</h2>
+        <img src="day1-meeting.png" alt="First step of destiny" class="modal-img"/>
+        <p>
+          It all started when my sister-in-law met your parents at PNG. 
+          A conversation that seemed casual led to a lifetime spark ✨<br><br>
+          That day, unknowingly, our stars aligned.
+        </p>
+        <audio controls autoplay>
+          <source src="a_thousand_years.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+    `;
+    document.body.appendChild(modal);
+
+    modal.querySelector(".close-btn").onclick = () => {
+      modal.remove();
+    };
+  } else {
     alert(surpriseMessages[i] || `Surprise! 💌`);
-  });
+  }
+});
+
 
   grid.appendChild(tile);
 }
