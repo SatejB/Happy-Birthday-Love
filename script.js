@@ -61,7 +61,19 @@ for (let i = 0; i < totalDays; i++) {
       "bgm_day2.mp3"
     );
     document.body.appendChild(modal);
-  } else {
+  } else if (i === 2) {
+  // Day 3: Late night call in light rain
+  const modal = createModal(
+    "The Rainy Call ☔📞",
+    "day3-call-rain.png",
+    `One of those calm nights, 
+    you stood on your balcony and I stood on mine...<br><br>
+    A gentle drizzle, long talks, soft laughs — 
+    and just like that, rain became our love language.`,
+    "bgm_day3.mp3"
+  );
+  document.body.appendChild(modal); 
+  else {
     alert(surpriseMessages[i] || `Surprise! 💌`);
   }
 });
