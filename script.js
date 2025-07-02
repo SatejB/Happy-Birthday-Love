@@ -78,9 +78,11 @@ for (let i = 0; i < totalDays; i++) {
   const modal = createModal(
     "The Pandit Prank 😂📞",
     "day4-pandit-prank.png",
-    `I remember setting a serious tone and telling you we need to talk about what the pandit said about our kundali...<br><br>
-    You got so quiet, probably worried... and then I dropped it: “The pandit himself is in the hospital!” 🤭<br><br>
-    That little moment — your silence, your sigh of relief, and our shared laughter — was the first prank, but definitely not the last.`,
+    `I texted you, “There’s something serious I need to tell you… about what the pandit said regarding our kundali match.”<br><br>
+You got so worried, and I could feel the silence even before the call began.<br><br>
+And then — I hit you with it: “The pandit is the one who’s serious... he’s in the hospital!” 😂<br><br>
+That nervous laugh of yours afterwards? Worth everything. My first successful prank on you — and definitely not the last!
+`,
     "bgm_day4_funny.mp3"
   );
   document.body.appendChild(modal);
