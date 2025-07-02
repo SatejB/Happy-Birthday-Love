@@ -73,7 +73,19 @@ for (let i = 0; i < totalDays; i++) {
         "bgm_day3.mp3"
       );
       document.body.appendChild(modal);
-    } else {
+    } else if (i === 3) {
+  // Day 4: Pandit Prank Call
+  const modal = createModal(
+    "The Pandit Prank 😂📞",
+    "day4-pandit-prank.png",
+    `I remember setting a serious tone and telling you we need to talk about what the pandit said about our kundali...<br><br>
+    You got so quiet, probably worried... and then I dropped it: “The pandit himself is in the hospital!” 🤭<br><br>
+    That little moment — your silence, your sigh of relief, and our shared laughter — was the first prank, but definitely not the last.`,
+    "bgm_day4_funny.mp3"
+  );
+  document.body.appendChild(modal);
+}
+ else {
       alert(surpriseMessages[i] || `Surprise! 💌`);
     }
   });
