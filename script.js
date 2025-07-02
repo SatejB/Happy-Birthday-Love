@@ -40,35 +40,58 @@ for (let i = 0; i < totalDays; i++) {
 
   tile.addEventListener("click", () => {
   if (i === 0) {
-    // Day 1: Show custom image, message, and bgm
-    const modal = document.createElement("div");
-    modal.classList.add("custom-modal");
-    modal.innerHTML = `
-      <div class="modal-content">
-        <span class="close-btn">&times;</span>
-        <h2>Where it all began...</h2>
-        <img src="day1-meeting.png" alt="First step of destiny" class="modal-img"/>
-        <p>
-          It all started when my sister-in-law met your parents. 
-          A conversation that seemed casual led to a lifetime spark ✨<br><br>
-          That day, unknowingly, our stars aligned.
-        </p>
-        <audio controls autoplay>
-          <source src="a_thousand_years.mp3" type="audio/mpeg">
-          Your browser does not support the audio element.
-        </audio>
-      </div>
-    `;
+    // Day 1: Sister-in-law meets parents
+    const modal = createModal(
+      "Where it all began...",
+      "day1-meeting.png",
+      `It all started when my sister-in-law met your parents. 
+      A conversation that seemed casual led to a lifetime spark ✨<br><br>
+      That day, unknowingly, our stars aligned.`,
+      "a_thousand_years.mp3"
+    );
     document.body.appendChild(modal);
-
-    modal.querySelector(".close-btn").onclick = () => {
-      modal.remove();
-    };
+  } else if (i === 1) {
+    // Day 2: First WhatsApp conversation
+    const modal = createModal(
+      "The First 'Hi' 💬",
+      "day2-chat.png",
+      `10 May 2025 — Our first ever conversation...<br><br>
+      It wasn't grand or poetic, but it felt special. 
+      Just knowing I was speaking to someone who’d matter so much one day.`,
+      "bgm_day2.mp3"
+    );
+    document.body.appendChild(modal);
   } else {
     alert(surpriseMessages[i] || `Surprise! 💌`);
   }
 });
 
 
+
   grid.appendChild(tile);
 }
+
+function createModal(title, imageSrc, message, bgmSrc) {
+  const modal = document.createElement("div");
+  modal.classList.add("custom-modal");
+
+  modal.innerHTML = `
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <h2>${title}</h2>
+      <img src="${imageSrc}" alt="${title}" class="modal-img"/>
+      <p>${message}</p>
+      <audio controls autoplay loop>
+        <source src="${bgmSrc}" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+  `;
+
+  modal.querySelector(".close-btn").onclick = () => {
+    modal.remove();
+  };
+
+  return modal;
+}
+
