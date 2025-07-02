@@ -39,46 +39,44 @@ for (let i = 0; i < totalDays; i++) {
     : `${daysLeft} Day${daysLeft > 1 ? 's' : ''} to Go`;
 
   tile.addEventListener("click", () => {
-  if (i === 0) {
-    // Day 1: Sister-in-law meets parents
-    const modal = createModal(
-      "Where it all began...",
-      "day1-meeting.png",
-      `It all started when my sister-in-law met your parents. 
-      A conversation that seemed casual led to a lifetime spark ✨<br><br>
-      That day, unknowingly, our stars aligned.`,
-      "a_thousand_years.mp3"
-    );
-    document.body.appendChild(modal);
-  } else if (i === 1) {
-    // Day 2: First WhatsApp conversation
-    const modal = createModal(
-      "The First 'Hi' 💬",
-      "day2-chat.png",
-      `10 May 2025 — Our first ever conversation...<br><br>
-      It wasn't grand or poetic, but it felt special. 
-      Just knowing I was speaking to someone who’d matter so much one day.`,
-      "bgm_day2.mp3"
-    );
-    document.body.appendChild(modal);
-  } else if (i === 2) {
-  // Day 3: Late night call in light rain
-  const modal = createModal(
-    "The Rainy Call ☔📞",
-    "day3-call-rain.png",
-    `One of those calm nights, 
-    you stood on your balcony and I stood on mine...<br><br>
-    A gentle drizzle, long talks, soft laughs — 
-    and just like that, rain became our love language.`,
-    "bgm_day3.mp3"
-  );
-  document.body.appendChild(modal); 
-  else {
-    alert(surpriseMessages[i] || `Surprise! 💌`);
-  }
-});
-
-
+    if (i === 0) {
+      // Day 1: Sister-in-law meets parents
+      const modal = createModal(
+        "Where it all began...",
+        "day1-meeting.png",
+        `It all started when my sister-in-law met your parents. 
+        A conversation that seemed casual led to a lifetime spark ✨<br><br>
+        That day, unknowingly, our stars aligned.`,
+        "a_thousand_years.mp3"
+      );
+      document.body.appendChild(modal);
+    } else if (i === 1) {
+      // Day 2: First WhatsApp conversation
+      const modal = createModal(
+        "The First 'Hi' 💬",
+        "day2-chat.png",
+        `10 May 2025 — Our first ever conversation...<br><br>
+        It wasn't grand or poetic, but it felt special. 
+        Just knowing I was speaking to someone who’d matter so much one day.`,
+        "bgm_day2.mp3"
+      );
+      document.body.appendChild(modal);
+    } else if (i === 2) {
+      // Day 3: Late night call in light rain
+      const modal = createModal(
+        "The Rainy Call ☔📞",
+        "day3-call-rain.png",
+        `One of those calm nights, 
+        you stood on your balcony and I stood on mine...<br><br>
+        A gentle drizzle, long talks, soft laughs — 
+        and just like that, rain became our love language.`,
+        "bgm_day3.mp3"
+      );
+      document.body.appendChild(modal);
+    } else {
+      alert(surpriseMessages[i] || `Surprise! 💌`);
+    }
+  });
 
   grid.appendChild(tile);
 }
@@ -106,4 +104,3 @@ function createModal(title, imageSrc, message, bgmSrc) {
 
   return modal;
 }
-
