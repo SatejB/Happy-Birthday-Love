@@ -110,6 +110,19 @@ for (let i = 0; i < totalDays; i++) {
         "bgm_day6.mp3"
       );
       document.body.appendChild(modal);
+    } else if (i === 6) {
+      // Day 7: Marriage Finalised at Her Home
+      const modal = createModal(
+        "The Final Yes 💍🏠",
+        "day7-marriage-fixed.png",
+        `The day we visited your home — my parents, my sister-in-law, brother, nephew, everyone…<br><br>
+        And there you were, with your mom, dad, uncle, aunt, and mama — all waiting with a mix of excitement and grace.<br><br>
+        That day, surrounded by our families and blessings, it was decided...<br><br>
+        <strong>We are getting married.</strong><br><br>
+        No big speeches, no drama — just love, smiles, and that overwhelming feeling that everything was falling into place. 🤍`,
+        "bgm_day7_marriage_fixed.mp3"
+      );
+      document.body.appendChild(modal);
     } else {
       alert(surpriseMessages[i] || `Surprise! 💌`);
     }
