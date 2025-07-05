@@ -74,20 +74,30 @@ for (let i = 0; i < totalDays; i++) {
       );
       document.body.appendChild(modal);
     } else if (i === 3) {
-  // Day 4: Pandit Prank Call
-  const modal = createModal(
-    "The Pandit Prank 😂📞",
-    "day4-pandit-prank.png",
-    `I texted you, “There’s something serious I need to tell you… about what the pandit said regarding our kundali match.”<br><br>
-You got so worried, and I could feel the silence even before the call began.<br><br>
-And then — I hit you with it: “The pandit is the one who’s serious... he’s in the hospital!” 😂<br><br>
-That nervous laugh of yours afterwards? Worth everything. My first successful prank on you — and definitely not the last!
-`,
-    "bgm_day4_funny.mp3"
-  );
-  document.body.appendChild(modal);
-}
- else {
+      // Day 4: Pandit Prank Call
+      const modal = createModal(
+        "The Pandit Prank 😂📞",
+        "day4-pandit-prank.png",
+        `I texted you, “There’s something serious I need to tell you… about what the pandit said regarding our kundali match.”<br><br>
+        You got so worried, and I could feel the silence even before the call began.<br><br>
+        And then — I hit you with it: “The pandit is the one who’s serious... he’s in the hospital!” 😂<br><br>
+        That nervous laugh of yours afterwards? Worth everything. My first successful prank on you — and definitely not the last!`,
+        "bgm_day4_funny.mp3"
+      );
+      document.body.appendChild(modal);
+    } else if (i === 4) {
+      // Day 5: Families meet for the first time
+      const modal = createModal(
+        "When Our Worlds Met 🏡✨",
+        "day5-family-meet.png",
+        `The day your family visited mine...<br><br>
+        You in that beautiful saree, surrounded by your mom, dad, uncle, aunt, and mama — it was tradition, nerves, and grace all at once.<br><br>
+        My home was filled with smiles, teasing glances, and our little nephew dancing around the living room 😄<br><br>
+        That evening, our families didn’t just meet — they <i>clicked</i>. And so did my heart, a little more. ❤️`,
+        "bgm_day5.mp3"
+      );
+      document.body.appendChild(modal);
+    } else {
       alert(surpriseMessages[i] || `Surprise! 💌`);
     }
   });
@@ -105,7 +115,7 @@ function createModal(title, imageSrc, message, bgmSrc) {
       <h2>${title}</h2>
       <img src="${imageSrc}" alt="${title}" class="modal-img"/>
       <p>${message}</p>
-      <audio autoplay loop>
+      <audio autoplay loop style="display:none;">
         <source src="${bgmSrc}" type="audio/mpeg">
         Your browser does not support the audio element.
       </audio>
@@ -118,4 +128,3 @@ function createModal(title, imageSrc, message, bgmSrc) {
 
   return modal;
 }
-
