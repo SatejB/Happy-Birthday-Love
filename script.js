@@ -78,11 +78,11 @@ for (let i = 0; i < totalDays; i++) {
       const modal = createModal(
         "The Rooftop Moment 🌆❤️",
         "day4-rooftop-meet.png",
-    `The first time we met face-to-face...<br><br>
-    You walked in wearing your white full-sleeved top, and I sat there in my red tee — a bit nervous, a lot excited.<br><br>
-    But from the first few words, it felt like we’d known each other forever.<br><br>
-    Laughter, long stories, and that cozy rooftop under the stars...<br>
-    That’s when I knew — this was going to be something special.`,
+   `The first time we met face-to-face...<br><br>
+    You walked in wearing your white full-sleeved top, and I had just arrived on my bike — nervous but smiling.<br><br>
+    We met at that rooftop restaurant — lit softly, breezy, and filled with quiet conversations.<br><br>
+    Among the food, laughter, and gentle stares, time simply paused.<br>
+    That evening didn’t feel like a first meeting... it felt like something that was always meant to be.`,
         "bgm_day4_rooftop.mp3"
       );
       document.body.appendChild(modal);
