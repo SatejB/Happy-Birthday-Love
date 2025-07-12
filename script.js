@@ -78,11 +78,11 @@ for (let i = 0; i < totalDays; i++) {
       const modal = createModal(
         "The Rooftop Moment 🌆❤️",
         "day4-rooftop-meet.png",
-        `The first time we met face-to-face...<br><br>
-        You walked in wearing your pink top, and I sat there in my red tee — a bit nervous, a lot excited.<br><br>
-        But from the first few words, it felt like we’d known each other forever.<br><br>
-        Laughter, long stories, and that cozy rooftop under the stars...<br>
-        That’s when I knew — this was going to be something special.`,
+    `The first time we met face-to-face...<br><br>
+    You walked in wearing your white full-sleeved top, and I sat there in my red tee — a bit nervous, a lot excited.<br><br>
+    But from the first few words, it felt like we’d known each other forever.<br><br>
+    Laughter, long stories, and that cozy rooftop under the stars...<br>
+    That’s when I knew — this was going to be something special.`,
         "bgm_day4_rooftop.mp3"
       );
       document.body.appendChild(modal);
@@ -91,10 +91,10 @@ for (let i = 0; i < totalDays; i++) {
       const modal = createModal(
         "The Pandit Prank 😂📞",
         "day5-pandit-prank.png",
-        `I texted you, “There’s something serious I need to tell you… about what the pandit said regarding our kundali match.”<br><br>
-        You got so worried, and I could feel the silence even before the call began.<br><br>
-        And then — I hit you with it: “The pandit is the one who’s serious... he’s in the hospital!” 😂<br><br>
-        That nervous laugh of yours afterwards? Worth everything. My first successful prank on you — and definitely not the last!`,
+      `I texted you, “There’s something <strong>serious</strong> I need to tell you… about what the pandit said regarding our kundali match.”<br><br>
+      You got so worried, and I could feel the silence even before the call began.<br><br>
+      And then — I hit you with it: “The pandit is the one who’s <strong>serious</strong>... he’s in the hospital!” 😂<br><br>
+      That nervous laugh of yours afterwards? Worth everything. My first successful prank on you — and definitely not the last!`,
         "bgm_day5_funny.mp3"
       );
       document.body.appendChild(modal);
@@ -140,10 +140,11 @@ for (let i = 0; i < totalDays; i++) {
       const modal = createModal(
         "The Midnight Surprise 🎂🌙",
         "day9-birthday-surprise.png",
-        `20 June 2025 — Just when I thought the day was over, you did the most unexpected thing...<br><br>
-        At sharp 12 AM, you showed up at my door with a cake in one hand and flowers in the other.<br><br>
-        I had no clue, no idea, no expectation — and yet, there you were, lighting up my birthday.<br><br>
-        That surprise, that smile on your face... I’ll never forget it. 💐🎉`,
+        `Just after midnight — the clock had barely struck 12 on 20 June 2025...<br><br>
+        I came down from the terrace, walked into the house, and casually settled on the sofa — completely unaware of what was about to unfold.<br><br>
+        Little did I know, you were already inside, quietly hiding in one of the bedrooms with a cake and a bouquet of flowers.<br><br>
+        And then, you walked out — smiling, glowing, and carrying all the love in that surprise.<br><br>
+        That moment... so unexpected, so genuine — it’s etched in my heart forever. 💐🎂`,
         "bgm_day9_midnight_surprise.mp3"
       );
       document.body.appendChild(modal);
