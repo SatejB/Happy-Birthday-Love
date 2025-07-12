@@ -1,15 +1,18 @@
 const totalDays = 10;
 const birthday = new Date("2024-08-02");
 const today = new Date();
-const grid = document.getElementById("countdownGrid");
+const grid = document.getElementById("countdownGrid")!;
 
-// Start 10 days before birthday
+// Countdown starts 10 days before birthday
 const startDate = new Date(birthday);
 startDate.setDate(birthday.getDate() - totalDays);
 
-function formatDateToYMD(date) {
+// Format date as YYYY-MM-DD
+function formatDateToYMD(date: Date): string {
   return date.toISOString().split("T")[0];
 }
+
+const todayStr = formatDateToYMD(today);
 
 for (let i = 0; i < totalDays; i++) {
   const tileDate = new Date(startDate);
@@ -18,23 +21,23 @@ for (let i = 0; i < totalDays; i++) {
   const tile = document.createElement("div");
   tile.classList.add("day-tile");
 
-  const isBirthday = formatDateToYMD(tileDate) === formatDateToYMD(birthday);
+  const tileDateStr = formatDateToYMD(tileDate);
+  const isBirthday = tileDateStr === formatDateToYMD(birthday);
   const daysLeft = totalDays - i;
 
-  // Label
   tile.textContent = isBirthday
     ? "🎉 Happy Birthday! 🎉"
     : `${daysLeft} Day${daysLeft > 1 ? 's' : ''} to Go`;
 
-  // Lock future tiles
-  if (today < tileDate) {
+  // Lock tile if date is in future
+  if (tileDateStr > todayStr) {
     tile.classList.add("locked");
-    tile.innerHTML += "<br><small>Locked 🔒</small>";
+    tile.innerHTML += "<br><small>🔒 Unlocks soon</small>";
     grid.appendChild(tile);
     continue;
   }
 
-  // Open tile logic
+  // Unlocked tile – set modal event
   tile.addEventListener("click", () => {
     let modal;
 
@@ -137,7 +140,8 @@ for (let i = 0; i < totalDays; i++) {
   grid.appendChild(tile);
 }
 
-function createModal(title, imageSrc, message, bgmSrc) {
+// Modal creator function
+function createModal(title: string, imageSrc: string, message: string, bgmSrc: string): HTMLElement {
   const modal = document.createElement("div");
   modal.classList.add("custom-modal");
 
@@ -154,9 +158,9 @@ function createModal(title, imageSrc, message, bgmSrc) {
     </div>
   `;
 
-  modal.querySelector(".close-btn").onclick = () => {
+  modal.querySelector(".close-btn")!.addEventListener("click", () => {
     modal.remove();
-  };
+  });
 
   return modal;
 }
