@@ -1,6 +1,11 @@
-const startDate = new Date("2024-07-18");
 const totalDays = 10;
+const birthday = new Date("2024-08-02");
+const today = new Date();
 const grid = document.getElementById("countdownGrid");
+
+// Start 10 days before birthday
+const startDate = new Date(birthday);
+startDate.setDate(birthday.getDate() - totalDays);
 
 function formatDateToYMD(date) {
   return date.toISOString().split("T")[0];
@@ -8,18 +13,28 @@ function formatDateToYMD(date) {
 
 for (let i = 0; i < totalDays; i++) {
   const tileDate = new Date(startDate);
-  tileDate.setDate(tileDate.getDate() + i);
+  tileDate.setDate(startDate.getDate() + i);
 
   const tile = document.createElement("div");
   tile.classList.add("day-tile");
 
-  const isBirthday = formatDateToYMD(tileDate) === "2024-08-02";
+  const isBirthday = formatDateToYMD(tileDate) === formatDateToYMD(birthday);
   const daysLeft = totalDays - i;
 
+  // Label
   tile.textContent = isBirthday
     ? "🎉 Happy Birthday! 🎉"
     : `${daysLeft} Day${daysLeft > 1 ? 's' : ''} to Go`;
 
+  // Lock future tiles
+  if (today < tileDate) {
+    tile.classList.add("locked");
+    tile.innerHTML += "<br><small>Locked 🔒</small>";
+    grid.appendChild(tile);
+    continue;
+  }
+
+  // Open tile logic
   tile.addEventListener("click", () => {
     let modal;
 
@@ -114,8 +129,6 @@ for (let i = 0; i < totalDays; i++) {
         That moment... so unexpected, so genuine — it’s etched in my heart forever. 💐🎂`,
         "bgm_day9_midnight_surprise.mp3"
       );
-    } else {
-      alert("A surprise is loading... 💌");
     }
 
     if (modal) document.body.appendChild(modal);
