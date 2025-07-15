@@ -1,5 +1,5 @@
-const startDate = new Date("2024-07-21"); // 12 days before Aug 2
-const totalDays = 12;
+const startDate = new Date("2024-07-22"); // 11 days before Aug 2
+const totalDays = 11;
 const today = new Date();
 const grid = document.getElementById("countdownGrid");
 
@@ -8,7 +8,9 @@ function formatDateToYMD(date) {
 }
 
 const todayStr = formatDateToYMD(today);
-const messageLetters = "I Love You Reva".split("");
+
+// The 11-character romantic message for the tiles
+const messageLetters = ["I", "❤️", "L", "O", "V", "E", "❤️", "Y", "O", "U", "❤️"];
 
 for (let i = 0; i < totalDays; i++) {
   const tileDate = new Date(startDate);
@@ -20,7 +22,6 @@ for (let i = 0; i < totalDays; i++) {
 
   const isBirthday = tileDateStr === "2024-08-02";
   const daysLeft = totalDays - i;
-
   const letter = messageLetters[i] ?? "";
 
   tile.innerHTML = `
