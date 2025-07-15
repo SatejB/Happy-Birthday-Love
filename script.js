@@ -126,7 +126,19 @@ for (let i = 0; i < totalDays; i++) {
           That moment... so unexpected, so genuine — it’s etched in my heart forever. 💐🎂`,
           "bgm_day9_midnight_surprise.mp3"
         );
-      }
+      } else if (i === 9) {
+  modal = createModal(
+    "Practicing for Forever 💃🕺",
+    "day10-dance-practice.png",
+    `In that quiet studio with mirrors and wooden floors,<br><br>
+    we stood side by side — a little awkward, a little shy.<br><br>
+    Learning steps, missing beats, laughing over wrong moves — but always, always trying together.<br><br>
+    With your cousin sisters teaching us lovingly, and us stealing glances in between,<br>
+    this dance became more than just performance —<br>
+    it became a rehearsal for forever. ❤️`,
+    "bgm_day10.mp3"  // Replace with your final music file name
+  );
+}
 
       if (modal) document.body.appendChild(modal);
     });
