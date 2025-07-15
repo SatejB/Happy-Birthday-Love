@@ -1,53 +1,100 @@
+/* Base styles */
 body {
-    font-family: 'Segoe UI', sans-serif;
-    background: linear-gradient(#ffe5ec, #fff);
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    color: #333;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom, #ffe5ec, #ffffff);
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  color: #333;
 }
+
+/* Welcome section */
 .welcome-screen {
-    padding: 1rem;
+  padding: 2rem 1rem;
 }
+
 .hero-img {
-    width: 80%;
-    max-width: 400px;
-    border-radius: 20px;
-    margin-top: 1rem;
+  width: 80%;
+  max-width: 400px;
+  border-radius: 20px;
+  margin-top: 1rem;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
 }
+
 h1 {
-    color: #c2185b;
-    font-size: 2.2rem;
-    margin: 0.5rem 0;
+  color: #c2185b;
+  font-size: 2.4rem;
+  margin: 0.5rem 0;
 }
+
 .tagline {
-    font-style: italic;
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
+  font-style: italic;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #880e4f;
 }
+
 .from {
-    font-weight: bold;
-    margin-bottom: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  font-size: 1rem;
+  color: #ad1457;
 }
+
+/* Grid styles */
 .countdown-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
-    gap: 10px;
-    padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+  gap: 15px;
+  padding: 20px;
+  max-width: 600px;
+  margin: 0 auto;
 }
+
+/* Tile styles */
 .day-tile {
-    background: #f8bbd0;
-    padding: 15px;
-    border-radius: 10px;
-    font-size: 1rem;
-    cursor: pointer;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  background: #fff0f5;
+  padding: 1rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
 }
+
+.day-tile:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.tile-letter {
+  font-size: 2.4rem;
+  font-weight: bold;
+  color: #e91e63;
+  margin-bottom: 0.5rem;
+}
+
+.tile-label {
+  font-size: 0.9rem;
+  color: #6a1b9a;
+}
+
+/* Locked tiles */
 .day-tile.locked {
-    background: #e0e0e0;
-    color: #aaa;
-    cursor: not-allowed;
+  background: #e0e0e0;
+  color: #aaa;
+  opacity: 0.6;
+  pointer-events: none;
+  cursor: not-allowed;
 }
+
+.locked-text {
+  display: block;
+  font-size: 0.8rem;
+  color: #555;
+  margin-top: 5px;
+}
+
+/* Modal */
 .custom-modal {
   position: fixed;
   top: 0;
@@ -63,12 +110,13 @@ h1 {
 
 .modal-content {
   background: white;
-  padding: 20px;
+  padding: 25px;
   max-width: 500px;
-  border-radius: 10px;
+  border-radius: 15px;
   text-align: center;
   position: relative;
   animation: fadeIn 0.5s ease-in-out;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
 }
 
 .modal-content img.modal-img {
@@ -76,46 +124,31 @@ h1 {
   max-height: 300px;
   object-fit: cover;
   margin-bottom: 15px;
-  border-radius: 8px;
+  border-radius: 10px;
 }
 
 .close-btn {
   position: absolute;
-  top: 8px;
-  right: 12px;
+  top: 10px;
+  right: 15px;
   font-size: 24px;
   cursor: pointer;
+  color: #f06292;
+  font-weight: bold;
 }
 
-.day-tile {
-  padding: 1rem;
-  text-align: center;
-  border-radius: 12px;
-  background: #fff0f5;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+.close-btn:hover {
+  color: #c2185b;
 }
 
-.tile-letter {
-  font-family: 'Segoe UI', sans-serif;
-  margin-bottom: 0.5rem;
-}
-
-.day-tile.locked {
-  opacity: 0.4;
-  pointer-events: none;
-  cursor: not-allowed;
-}
-
-.locked-text {
-  display: block;
-  font-size: 0.8rem;
-  color: #666;
-  margin-top: 5px;
-}
-
-
-
+/* Fade-in animation */
 @keyframes fadeIn {
-  from { opacity: 0; transform: scale(0.9); }
-  to { opacity: 1; transform: scale(1); }
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
