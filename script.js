@@ -1,26 +1,21 @@
-const startDate = new Date("2024-07-22"); // 11 days before Aug 2
+const startDate = new Date("2024-07-22"); // Start date of countdown
 const totalDays = 11;
-const today = new Date();
 const grid = document.getElementById("countdownGrid");
 
-function formatDateToYMD(date) {
+function formatDateToYMD(date: Date): string {
   return date.toISOString().split("T")[0];
 }
 
-const todayStr = formatDateToYMD(today);
-
-// The 11-character romantic message for the tiles
 const messageLetters = ["I", "❤️", "L", "O", "V", "E", "❤️", "Y", "O", "U", "❤️"];
 
 for (let i = 0; i < totalDays; i++) {
   const tileDate = new Date(startDate);
   tileDate.setDate(tileDate.getDate() + i);
-  const tileDateStr = formatDateToYMD(tileDate);
 
   const tile = document.createElement("div");
   tile.classList.add("day-tile");
 
-  const isBirthday = tileDateStr === "2024-08-02";
+  const isBirthday = formatDateToYMD(tileDate) === "2024-08-02";
   const daysLeft = totalDays - i;
   const letter = messageLetters[i] ?? "";
 
@@ -33,7 +28,12 @@ for (let i = 0; i < totalDays; i++) {
     </div>
   `;
 
-  if (tileDateStr > todayStr) {
+  // Unlock at 12:00 AM on tile's date
+  const now = new Date();
+  const unlockTime = new Date(tileDate);
+  unlockTime.setHours(0, 0, 0, 0);
+
+  if (now < unlockTime) {
     tile.classList.add("locked");
     tile.innerHTML += `<small class="locked-text">🔒 Locked</small>`;
   } else {
@@ -144,25 +144,15 @@ for (let i = 0; i < totalDays; i++) {
           "bgm_day10.mp3"
         );
       } else if (i === 10) {
-  modal = createModal(
-    "Your Special Day, My Forever Gift 🎂💍",
-    "day11-final.png",
-    `2nd August 2025 — Your Birthday 🎉<br><br>
-    The day the universe gifted me you. And this year, it’s even more magical...<br><br>
-    Because tomorrow, on 3rd August, we take the first official step toward forever — our <strong>Engagement Day</strong> 💍<br><br>
-    Thank you for being born. Thank you for choosing me. <br><br>
-    I Love You, Reva. Today, tomorrow, and always. ❤️`,
-    "bgm_day11_final.mp3"
-  );
-      } else if (i === 11) {
         modal = createModal(
-          "The Countdown Ends 💝",
-          "day12-final.png",
-          `From day 1 to day 12 — it’s been a ride of memories, surprises, and smiles.<br><br>
-          And today, I just want to say one thing, not through a tile but from my heart:<br><br>
-          <strong>I Love You, Reva.</strong><br><br>
-          Always have. Always will. 💫`,
-          "bgm_day12_final.mp3"
+          "Your Special Day, My Forever Gift 🎂💍",
+          "day11-final.png",
+          `2nd August 2025 — Your Birthday 🎉<br><br>
+          The day the universe gifted me you. And this year, it’s even more magical...<br><br>
+          Because tomorrow, on 3rd August, we take the first official step toward forever — our <strong>Engagement Day</strong> 💍<br><br>
+          Thank you for being born. Thank you for choosing me. <br><br>
+          I Love You, Reva. Today, tomorrow, and always. ❤️`,
+          "bgm_day11_final.mp3"
         );
       }
 
@@ -170,10 +160,10 @@ for (let i = 0; i < totalDays; i++) {
     });
   }
 
-  grid.appendChild(tile);
+  grid!.appendChild(tile);
 }
 
-function createModal(title, imageSrc, message, bgmSrc) {
+function createModal(title: string, imageSrc: string, message: string, bgmSrc: string): HTMLElement {
   const modal = document.createElement("div");
   modal.classList.add("custom-modal");
 
@@ -190,6 +180,6 @@ function createModal(title, imageSrc, message, bgmSrc) {
     </div>
   `;
 
-  modal.querySelector(".close-btn").onclick = () => modal.remove();
+  modal.querySelector(".close-btn")!.addEventListener("click", () => modal.remove());
   return modal;
 }
