@@ -144,16 +144,16 @@ for (let i = 0; i < totalDays; i++) {
           "bgm_day10.mp3"
         );
       } else if (i === 10) {
-        modal = createModal(
-          "The Letter You Didn't Expect ✉️",
-          "day11-letter.png",
-          `I had written you a letter... not to impress, but to express.<br><br>
-          A few pages filled with feelings I couldn't speak aloud —<br>
-          about our journey, your laughter, and the peace you bring.<br><br>
-          Maybe you'll read it someday, maybe you already did...<br>
-          but I meant every word. 📝❤️`,
-          "bgm_day11_letter.mp3"
-        );
+  modal = createModal(
+    "Your Special Day, My Forever Gift 🎂💍",
+    "day11-final.png",
+    `2nd August 2025 — Your Birthday 🎉<br><br>
+    The day the universe gifted me you. And this year, it’s even more magical...<br><br>
+    Because tomorrow, on 3rd August, we take the first official step toward forever — our <strong>Engagement Day</strong> 💍<br><br>
+    Thank you for being born. Thank you for choosing me. <br><br>
+    I Love You, Reva. Today, tomorrow, and always. ❤️`,
+    "bgm_day11_final.mp3"
+  );
       } else if (i === 11) {
         modal = createModal(
           "The Countdown Ends 💝",
