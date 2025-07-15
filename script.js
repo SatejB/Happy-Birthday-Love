@@ -1,5 +1,5 @@
-const startDate = new Date("2024-07-23"); // 10 days before Aug 2
-const totalDays = 10;
+const startDate = new Date("2024-07-21"); // 12 days before Aug 2
+const totalDays = 12;
 const today = new Date();
 const grid = document.getElementById("countdownGrid");
 
@@ -8,6 +8,7 @@ function formatDateToYMD(date) {
 }
 
 const todayStr = formatDateToYMD(today);
+const messageLetters = "I Love You Reva".split("");
 
 for (let i = 0; i < totalDays; i++) {
   const tileDate = new Date(startDate);
@@ -20,18 +21,21 @@ for (let i = 0; i < totalDays; i++) {
   const isBirthday = tileDateStr === "2024-08-02";
   const daysLeft = totalDays - i;
 
+  const letter = messageLetters[i] ?? "";
+
   tile.innerHTML = `
+    <div class="tile-letter" style="font-size: 2.5rem; font-weight: bold; color: #e91e63;">
+      ${letter === " " ? "&nbsp;" : letter}
+    </div>
     <div class="tile-label">
-      ${isBirthday ? "🎉 Happy Birthday! 🎉" : `${daysLeft} Day${daysLeft > 1 ? 's' : ''} to Go`}
+      ${isBirthday ? "🎉 Happy Birthday! 🎉" : `${daysLeft} Day${daysLeft > 1 ? "s" : ""} to Go`}
     </div>
   `;
 
   if (tileDateStr > todayStr) {
-    // LOCK FUTURE TILES
     tile.classList.add("locked");
     tile.innerHTML += `<small class="locked-text">🔒 Locked</small>`;
   } else {
-    // UNLOCKED - ALLOW MODALS
     tile.addEventListener("click", () => {
       let modal;
 
@@ -127,18 +131,39 @@ for (let i = 0; i < totalDays; i++) {
           "bgm_day9_midnight_surprise.mp3"
         );
       } else if (i === 9) {
-  modal = createModal(
-    "Practicing for Forever 💃🕺",
-    "day10-dance-practice.png",
-    `In that quiet studio with mirrors and wooden floors,<br><br>
-    we stood side by side — a little awkward, a little shy.<br><br>
-    Learning steps, missing beats, laughing over wrong moves — but always, always trying together.<br><br>
-    With your cousin sisters teaching us lovingly, and us stealing glances in between,<br>
-    this dance became more than just performance —<br>
-    it became a rehearsal for forever. ❤️`,
-    "bgm_day10.mp3"  // Replace with your final music file name
-  );
-}
+        modal = createModal(
+          "Practicing for Forever 💃🕺",
+          "day10-dance-practice.png",
+          `In that quiet studio with mirrors and wooden floors,<br><br>
+          we stood side by side — a little awkward, a little shy.<br><br>
+          Learning steps, missing beats, laughing over wrong moves — but always, always trying together.<br><br>
+          With your cousin sisters teaching us lovingly, and us stealing glances in between,<br>
+          this dance became more than just performance —<br>
+          it became a rehearsal for forever. ❤️`,
+          "bgm_day10.mp3"
+        );
+      } else if (i === 10) {
+        modal = createModal(
+          "The Letter You Didn't Expect ✉️",
+          "day11-letter.png",
+          `I had written you a letter... not to impress, but to express.<br><br>
+          A few pages filled with feelings I couldn't speak aloud —<br>
+          about our journey, your laughter, and the peace you bring.<br><br>
+          Maybe you'll read it someday, maybe you already did...<br>
+          but I meant every word. 📝❤️`,
+          "bgm_day11_letter.mp3"
+        );
+      } else if (i === 11) {
+        modal = createModal(
+          "The Countdown Ends 💝",
+          "day12-final.png",
+          `From day 1 to day 12 — it’s been a ride of memories, surprises, and smiles.<br><br>
+          And today, I just want to say one thing, not through a tile but from my heart:<br><br>
+          <strong>I Love You, Reva.</strong><br><br>
+          Always have. Always will. 💫`,
+          "bgm_day12_final.mp3"
+        );
+      }
 
       if (modal) document.body.appendChild(modal);
     });
@@ -165,6 +190,5 @@ function createModal(title, imageSrc, message, bgmSrc) {
   `;
 
   modal.querySelector(".close-btn").onclick = () => modal.remove();
-
   return modal;
 }
