@@ -192,6 +192,6 @@ function createModal(title: string, imageSrc: string, message: string, bgmSrc: s
     </div>
   `;
 
-  modal.querySelector(".close-btn")!.addEventListener("click", () => modal.remove());
+  modal.querySelector(".close-btn").addEventListener("click", () => modal.remove());
   return modal;
 }
