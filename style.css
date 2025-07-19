@@ -88,12 +88,33 @@ h1 {
 }
 
 /* Locked tiles */
-.day-tile.locked {
-  background: #e0e0e0;
-  color: #aaa;
-  opacity: 0.5;
+/* Funny tooltip on hover */
+.day-tile.locked .locked-text {
+  position: relative;
+  display: inline-block;
+  cursor: default;
+}
+
+.day-tile.locked .locked-text::after {
+  content: "No peeking! 👀";
+  position: absolute;
+  bottom: 120%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 6px;
+  white-space: nowrap;
+  font-size: 0.75rem;
+  opacity: 0;
   pointer-events: none;
-  cursor: not-allowed;
+  transition: opacity 0.2s ease-in-out;
+  z-index: 10;
+}
+
+.day-tile.locked .locked-text:hover::after {
+  opacity: 1;
 }
 
 .locked-text {
