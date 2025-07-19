@@ -9,9 +9,7 @@ const funnyMessages = [
   "Your curiosity is noted 🧐"
 ];
 
-console.log("Script is running");
-
-document.getElementById("countdownGrid").innerHTML = `<div style="color:white">JS is working!</div>`;
+const grid = document.getElementById("countdownGrid");
 
 function formatDateToYMD(date) {
   return date.toISOString().split("T")[0];
