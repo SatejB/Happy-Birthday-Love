@@ -1,5 +1,14 @@
 const startDate = new Date("2024-07-22"); // Start date of countdown
 const totalDays = 11;
+const funnyMessages = [
+  "No peeking! 👀",
+  "Patience, young Padawan 🧘‍♂️",
+  "You shall not pass! ⚔️",
+  "Time travel not enabled yet ⏳",
+  "Nice try, hacker 😜",
+  "Your curiosity is noted 🧐"
+];
+
 const grid = document.getElementById("countdownGrid");
 
 function formatDateToYMD(date: Date): string {
@@ -35,7 +44,9 @@ for (let i = 0; i < totalDays; i++) {
 
   if (now < unlockTime) {
     tile.classList.add("locked");
-    tile.innerHTML += `<small class="locked-text">🔒 Locked</small>`;
+    const randomMsg = funnyMessages[Math.floor(Math.random() * funnyMessages.length)];
+tile.innerHTML += `<small class="locked-text" data-tooltip="${randomMsg}">🔒 Locked</small>`;
+
   } else {
     tile.addEventListener("click", () => {
       let modal;
