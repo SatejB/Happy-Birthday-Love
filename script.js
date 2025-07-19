@@ -13,9 +13,10 @@ console.log("Script is running");
 
 document.getElementById("countdownGrid").innerHTML = `<div style="color:white">JS is working!</div>`;
 
-function formatDateToYMD(date: Date): string {
+function formatDateToYMD(date) {
   return date.toISOString().split("T")[0];
 }
+
 
 const messageLetters = ["I", "❤️", "L", "O", "V", "E", "❤️", "Y", "O", "U", "❤️"];
 
