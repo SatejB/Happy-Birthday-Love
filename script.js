@@ -172,7 +172,7 @@ tile.innerHTML += `<small class="locked-text" data-tooltip="${randomMsg}">🔒 L
     });
   }
 
-  grid!.appendChild(tile);
+  grid.appendChild(tile);
 }
 
 function createModal(title: string, imageSrc: string, message: string, bgmSrc: string): HTMLElement {
