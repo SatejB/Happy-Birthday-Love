@@ -175,7 +175,7 @@ tile.innerHTML += `<small class="locked-text" data-tooltip="${randomMsg}">🔒 L
   grid.appendChild(tile);
 }
 
-function createModal(title: string, imageSrc: string, message: string, bgmSrc: string): HTMLElement {
+function createModal(title, imageSrc, message, bgmSrc) {
   const modal = document.createElement("div");
   modal.classList.add("custom-modal");
 
