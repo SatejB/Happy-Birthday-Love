@@ -43,7 +43,7 @@ for (let i = 0; i < totalDays; i++) {
   const unlockTime = new Date(tileDate);
   unlockTime.setHours(0, 0, 0, 0);
 
-  if (now < unlockTime) {
+  if (i > 0) {
     tile.classList.add("locked");
     const randomMsg = funnyMessages[Math.floor(Math.random() * funnyMessages.length)];
 tile.innerHTML += `<small class="locked-text" data-tooltip="${randomMsg}">🔒 Locked</small>`;
