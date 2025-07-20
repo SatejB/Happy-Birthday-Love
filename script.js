@@ -26,7 +26,7 @@ for (let i = 0; i < totalDays; i++) {
   tile.classList.add("day-tile");
 
   const isBirthday = formatDateToYMD(tileDate) === "2024-08-02";
-  const daysLeft = totalDays - i;
+  const daysLeft = totalDays - i - 1;
   const letter = messageLetters[i] ?? "";
 
   tile.innerHTML = `
