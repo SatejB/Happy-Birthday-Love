@@ -6,8 +6,13 @@ const funnyMessages = [
   "You shall not pass! ⚔️",
   "Time travel not enabled yet ⏳",
   "Nice try, hacker 😜",
-  "Your curiosity is noted 🧐"
+  "Your curiosity is noted 🧐",
+  "Locked tighter than your secrets 🤐",
+  "Future surprise loading… please wait 💫",
+  "Even Sherlock couldn’t unlock this 🔍",
+  "Too early! Go sip some chai ☕"
 ];
+
 
 const grid = document.getElementById("countdownGrid");
 
@@ -46,7 +51,12 @@ unlockTime.setHours(0, 0, 0, 0);
 if (i > 0) {
     tile.classList.add("locked");
     const randomMsg = funnyMessages[Math.floor(Math.random() * funnyMessages.length)];
-tile.innerHTML += `<small class="locked-text" data-tooltip="${randomMsg}">🔒 Locked</small>`;
+const lockMsg = document.createElement("small");
+lockMsg.classList.add("locked-text");
+lockMsg.textContent = "🔒 Locked";
+lockMsg.setAttribute("data-tooltip", randomMsg);
+tile.appendChild(lockMsg);
+
 
   } else {
     tile.addEventListener("click", () => {
