@@ -38,12 +38,12 @@ for (let i = 0; i < totalDays; i++) {
     </div>
   `;
 
-  // Unlock at 12:00 AM on tile's date
-  const now = new Date();
-  const unlockTime = new Date(tileDate);
-  unlockTime.setHours(0, 0, 0, 0);
+ // Unlock at 12:00 AM on tile's date
+const now = new Date();
+const unlockTime = new Date(tileDate);
+unlockTime.setHours(0, 0, 0, 0);
 
-  if (i > 0) {
+if (i > 0) {
     tile.classList.add("locked");
     const randomMsg = funnyMessages[Math.floor(Math.random() * funnyMessages.length)];
 tile.innerHTML += `<small class="locked-text" data-tooltip="${randomMsg}">🔒 Locked</small>`;
