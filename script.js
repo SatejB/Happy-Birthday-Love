@@ -1,4 +1,4 @@
-const startDate = new Date("2024-07-22"); // Start date of countdown
+const startDate = new Date("2024-07-23");
 const totalDays = 11;
 const funnyMessages = [
   "No peeking! 👀",
