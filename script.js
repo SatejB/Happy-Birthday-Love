@@ -49,10 +49,10 @@ for (let i = 0; i < totalDays; i++) {
 
  // Unlock at 12:00 AM on tile's date
 const now = new Date();
-const unlockTime = new Date("2025-07-24T00:00:00");
+const unlockTime = new Date(tileDate);
 unlockTime.setHours(0, 0, 0, 0);
 
-if (now > unlockTime) {
+if (i >= 2) {
  tile.classList.add("locked");
 
   const lockMsg = document.createElement("small");
