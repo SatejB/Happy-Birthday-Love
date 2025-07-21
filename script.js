@@ -47,7 +47,8 @@ for (let i = 0; i < totalDays; i++) {
 const now = new Date();
 const unlockTime = new Date(tileDate);
 unlockTime.setHours(0, 0, 0, 0);
-
+console.log("now",now);
+  console.log("unlock time",unlockTime);
 if (i > 0) {
   tile.classList.add("locked");
 
