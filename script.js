@@ -56,8 +56,8 @@ if (i > 0) {
   lockMsg.classList.add("locked-text");
   lockMsg.textContent = "🔒 Locked";
 
-  // Move randomMsg assignment **here**
-  const randomMsg = funnyMessages[i % funnyMessages.length];
+  // ✅ Assign random funny message
+  const randomMsg = funnyMessages[Math.floor(Math.random() * funnyMessages.length)];
   lockMsg.setAttribute("data-tooltip", randomMsg);
 
   tile.appendChild(lockMsg);
