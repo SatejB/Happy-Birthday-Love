@@ -48,22 +48,20 @@ const now = new Date();
 const unlockTime = new Date(tileDate);
 unlockTime.setHours(0, 0, 0, 0);
 
-if (new Date() < unlockTime)
- {
-    tile.classList.add("locked");
+if (i > 0) {
+  tile.classList.add("locked");
 
-  const randomMsg = funnyMessages[Math.floor(Math.random() * funnyMessages.length)];
   const lockMsg = document.createElement("small");
   lockMsg.classList.add("locked-text");
   lockMsg.textContent = "🔒 Locked";
 
-  // Set title attribute directly - it acts as native tooltip
-  lockMsg.title = randomMsg;
+  // Move randomMsg assignment **here**
+  const randomMsg = funnyMessages[Math.floor(Math.random() * funnyMessages.length)];
+  lockMsg.setAttribute("data-tooltip", randomMsg);
 
   tile.appendChild(lockMsg);
-
-
-  } else {
+}
+else {
     tile.addEventListener("click", () => {
       let modal;
 
