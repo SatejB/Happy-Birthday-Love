@@ -1,7 +1,7 @@
 const startDate = new Date("2025-07-23");
 const totalDays = 11;
 const funnyMessages = [
-  "No peeking! 👀",
+   "Patience, young Padawan 🧘‍♂️",
   "Patience, young Padawan 🧘‍♂️",
   "You shall not pass! ⚔️",
   "Time travel not enabled yet ⏳",
