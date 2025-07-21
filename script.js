@@ -13,7 +13,7 @@ const funnyMessages = [
   "Too early! Go sip some chai ☕",
   "Step away from the mystery button 🕵️‍♂️"
 ];
-let lockedCount = 0;
+let lockedCount = 2;
 
 
 
@@ -52,7 +52,7 @@ const now = new Date();
 const unlockTime = new Date(tileDate);
 unlockTime.setHours(0, 0, 0, 0);
 
-if (i >= 2) {
+if (now < unlockTime) {
  tile.classList.add("locked");
 
   const lockMsg = document.createElement("small");
