@@ -74,9 +74,10 @@ else {
         modal = createModal(
           "Where it all began...",
           "day1-meeting.png",
-          `It all started when my sister-in-law met your parents. 
-          A conversation that seemed casual led to a lifetime spark ✨<br><br>
-          That day, unknowingly, our stars aligned.`,
+          `It all began with a simple chat between my sister-in-law and your parents.<br>
+No one knew then, but that small moment quietly stitched our worlds together. ✨<br><br>
+A spark was lit… and destiny had already taken its first step.
+`,
           "a_thousand_years.mp3"
         );
       } else if (i === 1) {
