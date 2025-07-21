@@ -13,6 +13,8 @@ const funnyMessages = [
   "Too early! Go sip some chai ☕",
   "Step away from the mystery button 🕵️‍♂️"
 ];
+let lockedCount = 0;
+
 
 
 
@@ -32,7 +34,7 @@ for (let i = 0; i < totalDays; i++) {
   const tile = document.createElement("div");
   tile.classList.add("day-tile");
 
-  const isBirthday = formatDateToYMD(tileDate) === "2024-08-02";
+  const isBirthday = formatDateToYMD(tileDate) === "2025-08-02";
   const daysLeft = totalDays - i - 1;
   const letter = messageLetters[i] ?? "";
 
@@ -49,19 +51,18 @@ for (let i = 0; i < totalDays; i++) {
 const now = new Date();
 const unlockTime = new Date(tileDate);
 unlockTime.setHours(0, 0, 0, 0);
-console.log("now",now);
-  console.log("unlock time",unlockTime);
+
 if (now < unlockTime) {
-  tile.classList.add("locked");
+ tile.classList.add("locked");
 
   const lockMsg = document.createElement("small");
   lockMsg.classList.add("locked-text");
   lockMsg.textContent = "🔒 Locked";
 
-  // ✅ Assign random funny message
-  const msgIndex = i % funnyMessages.length;
-lockMsg.setAttribute("data-tooltip", funnyMessages[msgIndex]);
-
+  // ✅ Assign rotating funny messages
+  const msgIndex = lockedCount % funnyMessages.length;
+  lockMsg.setAttribute("data-tooltip", funnyMessages[msgIndex]);
+  lockedCount++;
 
   tile.appendChild(lockMsg);
 }
