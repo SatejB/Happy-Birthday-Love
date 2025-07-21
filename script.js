@@ -52,7 +52,7 @@ const now = new Date();
 const unlockTime = new Date(tileDate);
 unlockTime.setHours(0, 0, 0, 0);
 
-if (now < unlockTime) {
+if (i >= 2) {
  tile.classList.add("locked");
 
   const lockMsg = document.createElement("small");
