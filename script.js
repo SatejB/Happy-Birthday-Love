@@ -48,7 +48,8 @@ const now = new Date();
 const unlockTime = new Date(tileDate);
 unlockTime.setHours(0, 0, 0, 0);
 
-if (i > 0) {
+if (new Date() < unlockTime)
+ {
     tile.classList.add("locked");
     const randomMsg = funnyMessages[Math.floor(Math.random() * funnyMessages.length)];
 const lockMsg = document.createElement("small");
