@@ -1,4 +1,4 @@
-const startDate = new Date("2024-07-23");
+const startDate = new Date("2025-07-23");
 const totalDays = 11;
 const funnyMessages = [
   "No peeking! 👀",
@@ -49,7 +49,7 @@ const unlockTime = new Date(tileDate);
 unlockTime.setHours(0, 0, 0, 0);
 console.log("now",now);
   console.log("unlock time",unlockTime);
-if (i > 0) {
+if (now < unlockTime) {
   tile.classList.add("locked");
 
   const lockMsg = document.createElement("small");
