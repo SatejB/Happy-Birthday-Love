@@ -51,12 +51,16 @@ unlockTime.setHours(0, 0, 0, 0);
 if (new Date() < unlockTime)
  {
     tile.classList.add("locked");
-    const randomMsg = funnyMessages[Math.floor(Math.random() * funnyMessages.length)];
-const lockMsg = document.createElement("small");
-lockMsg.classList.add("locked-text");
-lockMsg.textContent = "🔒 Locked";
-lockMsg.setAttribute("data-tooltip", randomMsg);
-tile.appendChild(lockMsg);
+
+  const randomMsg = funnyMessages[Math.floor(Math.random() * funnyMessages.length)];
+  const lockMsg = document.createElement("small");
+  lockMsg.classList.add("locked-text");
+  lockMsg.textContent = "🔒 Locked";
+
+  // Set title attribute directly - it acts as native tooltip
+  lockMsg.title = randomMsg;
+
+  tile.appendChild(lockMsg);
 
 
   } else {
