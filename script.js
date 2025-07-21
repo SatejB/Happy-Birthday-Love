@@ -2,7 +2,7 @@ const startDate = new Date("2025-07-23");
 const totalDays = 11;
 const funnyMessages = [
    "Patience, young Padawan 🧘‍♂️",
-  "Patience, young Padawan 🧘‍♂️",
+    "No peeking! 👀",
   "You shall not pass! ⚔️",
   "Time travel not enabled yet ⏳",
   "Nice try, hacker 😜",
@@ -52,7 +52,7 @@ const now = new Date();
 const unlockTime = new Date(tileDate);
 unlockTime.setHours(0, 0, 0, 0);
 
-if (i >= 2) {
+if (now < unlockTime) {
  tile.classList.add("locked");
 
   const lockMsg = document.createElement("small");
