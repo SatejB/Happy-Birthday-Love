@@ -10,8 +10,10 @@ const funnyMessages = [
   "Locked tighter than your secrets 🤐",
   "Future surprise loading… please wait 💫",
   "Even Sherlock couldn’t unlock this 🔍",
-  "Too early! Go sip some chai ☕"
+  "Too early! Go sip some chai ☕",
+  "Step away from the mystery button 🕵️‍♂️"
 ];
+
 
 
 const grid = document.getElementById("countdownGrid");
@@ -57,8 +59,9 @@ if (now < unlockTime) {
   lockMsg.textContent = "🔒 Locked";
 
   // ✅ Assign random funny message
-  const randomMsg = funnyMessages[Math.floor(Math.random() * funnyMessages.length)];
-  lockMsg.setAttribute("data-tooltip", randomMsg);
+  const msgIndex = i % funnyMessages.length;
+lockMsg.setAttribute("data-tooltip", funnyMessages[msgIndex]);
+
 
   tile.appendChild(lockMsg);
 }
