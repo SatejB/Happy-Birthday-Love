@@ -120,44 +120,48 @@ That evening didn’t feel like a first meeting... it felt like something that w
           "bgm_day4_rooftop.mp3"
         );
       } else if (i === 4) {
-        modal = createModal(
-          "The Pandit Prank 😂📞",
-          "day5-pandit-prank.png",
-          `I texted you, “There’s something <strong>serious</strong> I need to tell you… about what the pandit said regarding our kundali match.”<br><br>
-          You got so worried, and I could feel the silence even before the call began.<br><br>
-          And then — I hit you with it: “The pandit is the one who’s <strong>serious</strong>... he’s in the hospital!” 😂<br><br>
-          That nervous laugh of yours afterwards? Worth everything. My first successful prank on you — and definitely not the last!`,
-          "bgm_day5_funny.mp3"
-        );
-      } else if (i === 5) {
-        modal = createModal(
-          "When Our Worlds Met 🏡✨",
-          "day6-family-meet.png",
-          `The day your family visited mine...<br><br>
-          You in that beautiful saree, surrounded by your mom, dad, uncle, aunt, and mama — it was tradition, nerves, and grace all at once.<br><br>
-          My home was filled with smiles, teasing glances, and our little nephew dancing around the living room 😄<br><br>
-          That evening, our families didn’t just meet — they <i>clicked</i>. And so did my heart, a little more. ❤️`,
-          "bgm_day6.mp3"
-        );
-      } else if (i === 6) {
+  modal = createModal(
+    "When Our Worlds Met 🏡✨",
+    "day6-family-meet.png",
+    `22 May 2025 — The day your family visited mine...<br><br>
+You in that beautiful saree, surrounded by your mom, dad, uncle, aunt, and mama — it was tradition, nerves, and grace all at once.<br><br>
+My home was filled with smiles, teasing glances, and our little nephew dancing around the living room 😄<br><br>
+That evening, our families didn’t just meet — they <i>clicked</i>. And so did my heart, a little more. ❤️`,
+    "bgm_day6.mp3"
+  );
+} else if (i === 5) {
+  modal = createModal(
+    "The Pandit Prank 😂📞",
+    "day5-pandit-prank.png",
+    `I texted you, “There’s something <strong>serious</strong> I need to tell you… about what the pandit said regarding our kundali match.”<br><br>
+    You got so worried, and I could feel the silence even before the call began.<br><br>
+    And then — I hit you with it: “The pandit is the one who’s <strong>serious</strong>... he’s in the hospital!” 😂<br><br>
+    That nervous laugh of yours afterwards? Worth everything. My first successful prank on you — and definitely not the last!`,
+    "bgm_day5_funny.mp3"
+  );
+}
+else if (i === 6) {
         modal = createModal(
           "The Final Yes 💍🏠",
           "day7-marriage-fixed.png",
-          `The day we visited your home — my parents, my sister-in-law, brother, nephew, everyone…<br><br>
-          And there you were, with your mom, dad, uncle, aunt, and mama — all waiting with a mix of excitement and grace.<br><br>
-          That day, surrounded by our families and blessings, it was decided...<br><br>
-          <strong>We are getting married.</strong><br><br>
-          No big speeches, no drama — just love, smiles, and that overwhelming feeling that everything was falling into place. 🤍`,
+          `31st May 2025 — The day we visited your home — my parents, my sister-in-law, brother, nephew, everyone…<br><br>
+And there you were, with your mom, dad, uncle, aunt, and mama — all waiting with a mix of excitement and grace.<br><br>
+That day, surrounded by our families and blessings, it was decided...<br><br>
+<strong>We are getting married.</strong><br><br>
+No big speeches, no drama — just love, smiles, and that overwhelming feeling that everything was falling into place. 🤍`
+,
           "bgm_day7_marriage_fixed.mp3"
         );
       } else if (i === 7) {
         modal = createModal(
           "Our First Official Selfie 📸❤️",
           "day8-first-selfie.png",
-          `This was it — our very first selfie after everything became official. 📸<br><br>
-          No nerves, just joy — your smile, my grin, and that spark in our eyes.<br><br>
-          It wasn’t just a photo, it was a snapshot of a new beginning...<br>
-          the beginning of <i>us</i>, captured with warmth, laughter, and so much love. ❤️`,
+         `This was it — our very first selfie after everything became official. 📸<br><br>
+No nerves, just joy — your smile, my grin, and that spark in our eyes.<br><br>
+It wasn’t just a photo, it was a snapshot of a new beginning...<br>
+the beginning of <i>us</i>, captured with warmth, laughter, and so much love. ❤️<br><br>
+That night, even the skies couldn’t hold back — it rained and rained, and we got drenched in it till 11 pm...<br>
+But honestly, being stuck with you in that rain made it even more unforgettable. ☔💫`,
           "bgm_day8_selfie.mp3"
         );
       } else if (i === 8) {
