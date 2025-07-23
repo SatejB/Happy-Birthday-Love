@@ -2,7 +2,7 @@ const startDate = new Date("2025-07-23");
 const totalDays = 11;
 const funnyMessages = [
   "शानी झालीस का लय? 🫩",
-  "Back off, Baby! 🤚",
+  "आधी एक पप्पी दे!!😚",
   "Busted, Gorgeous 😅",
   "Oye hoye, Reva 😆",
   "Not now, Cutie 🕒",
