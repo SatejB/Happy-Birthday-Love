@@ -1,18 +1,16 @@
 const startDate = new Date("2025-07-23");
 const totalDays = 11;
 const funnyMessages = [
-   "Patience, young Padawan 🧘‍♂️",
-    "No peeking! 👀",
-  "You shall not pass! ⚔️",
-  "Time travel not enabled yet ⏳",
-  "Nice try, hacker 😜",
-  "Your curiosity is noted 🧐",
-  "Locked tighter than your secrets 🤐",
-  "Future surprise loading… please wait 💫",
-  "Even Sherlock couldn’t unlock this 🔍",
-  "Too early! Go sip some chai ☕",
-  "Step away from the mystery button 🕵️‍♂️"
+  "Nice try, Cutie 😜",
+  "Back off, Baby! 🤚",
+  "Busted, Gorgeous 😅",
+  "Oye hoye, Reva 😆",
+  "Not now, Cutie 🕒",
+  "Tsk tsk, Gangu 😜",
+  "Patience, Queen 👑",
+  "Locked 4 Reva 🔐"
 ];
+
 const shuffledMessages = [...funnyMessages].sort(() => Math.random() - 0.5);
 let lockedCount = 0;
 
