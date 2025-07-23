@@ -62,7 +62,7 @@ if (now < unlockTime) {
 
   // ✅ Assign rotating funny messages
   const msgIndex = lockedCount % shuffledMessages.length;
- lockMsg.setAttribute("data-tooltip", shuffledMessages[msgIndex]);
+ tile.setAttribute("data-tooltip", shuffledMessages[msgIndex]);
  lockedCount++;
 
   tile.appendChild(lockMsg);
