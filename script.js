@@ -85,9 +85,14 @@ A spark was lit… and destiny had already taken its first step.
         modal = createModal(
           "The First 'Hi' 💬",
           "day2-chat.png",
-          `10 May 2025 — Our first ever conversation...<br><br>
-          It wasn't grand or poetic, but it felt special. 
-          Just knowing I was speaking to someone who’d matter so much one day.`,
+          `10 May 2025 – Our very first conversation<br><br>
+
+To be honest, I wasn’t that serious when we first started chatting —<br>
+after going through 20 marriage prospects, I had stopped expecting much.<br><br>
+
+But there was something different about that exchange…<br>
+It wasn’t dramatic or poetic, but it lingered in my mind.<br>
+Like I had just unknowingly typed my way into something beautiful.`,
           "bgm_day2.mp3"
         );
       } else if (i === 2) {
