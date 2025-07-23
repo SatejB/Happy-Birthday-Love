@@ -97,21 +97,26 @@ Like I had just unknowingly typed my way into something beautiful.`,
         modal = createModal(
           "The Rainy Call ☔📞",
           "day3-call-rain.png",
-          `One of those calm nights, 
-          you stood on your balcony and I stood on mine...<br><br>
-          A gentle drizzle, long talks, soft laughs — 
-          and just like that, rain became our love language.`,
+          `One of those quiet, magical nights,<br>
+you stood on your balcony... and I, on my terrace.<br><br>
+The rain whispered between us,<br>
+long conversations turned into soft laughter,<br>
+and somewhere between each drop —<br>
+the drizzle became our love language.
+.`,
           "bgm_day3.mp3"
         );
       } else if (i === 3) {
         modal = createModal(
           "The Rooftop Moment 🌆❤️",
           "day4-rooftop-meet.png",
-          `The first time we met face-to-face...<br><br>
-          You walked in wearing your white full-sleeved top, and I had just arrived on my bike — nervous but smiling.<br><br>
-          We met at that rooftop restaurant — lit softly, breezy, and filled with quiet conversations.<br><br>
-          Among the food, laughter, and gentle stares, time simply paused.<br>
-          That evening didn’t feel like a first meeting... it felt like something that was always meant to be.`,
+          `15 May 2025 — The first time we met face-to-face...<br><br>
+You had already arrived — your dad dropped you off, and there you were, in your white full-sleeved top, looking like a dream.<br><br>
+I reached a little after, on my bike — nervous, excited, and smiling like a fool.<br><br>
+We met, we smiled, and then we headed to that rooftop restaurant — softly lit, breezy, wrapped in quiet conversations.<br><br>
+Among the food, laughter, and gentle stares, time simply paused.<br>
+That evening didn’t feel like a first meeting... it felt like something that was always meant to be.
+.`,
           "bgm_day4_rooftop.mp3"
         );
       } else if (i === 4) {
