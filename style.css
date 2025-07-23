@@ -178,7 +178,33 @@ h1 {
 .close-btn:hover {
   color: #c2185b;
 }
+.locked-text[data-tooltip]:hover::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+    padding: 8px 12px;
+    border-radius: 8px;
+    white-space: nowrap;
+    font-size: 0.9rem;
+    z-index: 1000;
+    margin-bottom: 5px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
 
+.locked-text[data-tooltip]:hover::before {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 5px solid transparent;
+    border-top-color: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
+}
 /* Animation */
 @keyframes fadeIn {
   from {
