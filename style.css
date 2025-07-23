@@ -178,6 +178,10 @@ h1 {
 .close-btn:hover {
   color: #c2185b;
 }
+.locked-text[data-tooltip] {
+    position: relative;
+}
+
 .locked-text[data-tooltip]:hover::after {
     content: attr(data-tooltip);
     position: absolute;
@@ -188,13 +192,18 @@ h1 {
     color: white;
     padding: 8px 12px;
     border-radius: 8px;
-    white-space: nowrap;
+    white-space: normal; /* allow wrapping */
     font-size: 0.9rem;
     z-index: 1000;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    max-width: 250px; /* limit width for mobile */
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    box-sizing: border-box;
 }
 
+/* Tooltip arrow */
 .locked-text[data-tooltip]:hover::before {
     content: '';
     position: absolute;
@@ -205,6 +214,21 @@ h1 {
     border-top-color: rgba(0, 0, 0, 0.9);
     z-index: 1000;
 }
+
+/* Optional: Prevent tooltip going off screen on small devices */
+@media (max-width: 500px) {
+    .locked-text[data-tooltip]:hover::after {
+        left: 10px;
+        right: 10px;
+        transform: none;
+        max-width: calc(100vw - 20px);
+    }
+
+    .locked-text[data-tooltip]:hover::before {
+        display: none; /* optional: hide arrow on small screen */
+    }
+}
+
 /* Animation */
 @keyframes fadeIn {
   from {
