@@ -13,6 +13,7 @@ const funnyMessages = [
   "Too early! Go sip some chai ☕",
   "Step away from the mystery button 🕵️‍♂️"
 ];
+const shuffledMessages = [...funnyMessages].sort(() => Math.random() - 0.5);
 let lockedCount = 0;
 
 
@@ -61,9 +62,9 @@ if (now < unlockTime) {
   lockMsg.textContent = "🔒 Locked";
 
   // ✅ Assign rotating funny messages
-  const msgIndex = lockedCount % funnyMessages.length;
-  lockMsg.setAttribute("data-tooltip", funnyMessages[msgIndex]);
-  lockedCount++;
+  const msgIndex = lockedCount % shuffledMessages.length;
+ lockMsg.setAttribute("data-tooltip", shuffledMessages[msgIndex]);
+ lockedCount++;
 
   tile.appendChild(lockMsg);
 }
