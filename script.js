@@ -13,7 +13,7 @@ const funnyMessages = [
   "Too early! Go sip some chai ☕",
   "Step away from the mystery button 🕵️‍♂️"
 ];
-let lockedCount = 2;
+let lockedCount = 0;
 
 
 
@@ -86,10 +86,8 @@ A spark was lit… and destiny had already taken its first step.
           "The First 'Hi' 💬",
           "day2-chat.png",
           `10 May 2025 – Our very first conversation<br><br>
-
 To be honest, I wasn’t that serious when we first started chatting —<br>
 after going through 20 marriage prospects, I had stopped expecting much.<br><br>
-
 But there was something different about that exchange…<br>
 It wasn’t dramatic or poetic, but it lingered in my mind.<br>
 Like I had just unknowingly typed my way into something beautiful.`,
