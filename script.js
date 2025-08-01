@@ -27,7 +27,7 @@ function formatDateToYMD(date) {
 const messageLetters = ["I", "❤️", "L", "O", "V", "E", "❤️", "Y", "O", "U", "❤️"];
 
 for (let i = 0; i < totalDays; i++) {
-   if (i === 10) continue;
+   
   const tileDate = new Date(startDate);
   tileDate.setDate(tileDate.getDate() + i);
 
