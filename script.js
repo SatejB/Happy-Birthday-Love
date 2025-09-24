@@ -189,7 +189,7 @@ But honestly, being stuck with you in that rain made it even more unforgettable.
       } else if (i === 10) {
         modal = createModal(
           "Your Special Day, My Forever Gift 🎂💍",
-          "day11-final.png",
+          "day11-final.jpg",
           `2nd August 2025 — Your Birthday 🎉<br><br>
           The day the universe gifted me you. And this year, it’s even more magical...<br><br>
           Because tomorrow, on 3rd August, we take the first official step toward forever — our <strong>Engagement Day</strong> 💍<br><br>
